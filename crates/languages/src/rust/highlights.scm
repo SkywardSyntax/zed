@@ -47,9 +47,9 @@
 ((identifier) @type
  (#match? @type "^[A-Z]"))
 
-; Assume all-caps names are constants
+; Assume all-caps names are constants, but exclude those with digits
 ((identifier) @constant
- (#match? @constant "^_*[A-Z][A-Z\\d_]*$"))
+ (#match? @constant "^_*[A-Z][A-Z_]*$"))
 
 [
   "("
